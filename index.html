@@ -34,7 +34,7 @@ width:auto;
  /*  ul{font-weight: bold;} 
           66 66 228        */
 
-h1 {color: rgb(69, 154, 211); font-family: 'Crete Round', serif; font-size: 300%; text-align:center;}
+
 h2{color: rgb(235, 90, 119); font-family:'Crete Round', serif;text-align: center; }
 p0{font-family: Arial, Helvetica, sans-serif; font-size: 200%; line-height: 150%; font-family: 'Stylish',
  sans-serif;color: rgb(190, 171, 171);}
@@ -42,11 +42,12 @@ p0{font-family: Arial, Helvetica, sans-serif; font-size: 200%; line-height: 150%
 p1{font-family:Arial, Helvetica, sans-serif; font-size: 200%;}
 p2{font-family: Arial, Helvetica, sans-serif; font-size:225%;font-family: 'Stylish', sans-serif;
 color: rgb(190, 171, 171);}
-p3{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
 
+p3{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
 p4{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
 p5{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
 p6{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
+p9 {color: rgb(0, 0, 0); font-family: 'Crete Round', serif; font-size: 300%; text-align:center;}
 
 
 a{text-decoration: none;}
@@ -66,12 +67,14 @@ a:visited
 }
 
 
-div.purpose 
+div.update 
 {
   position: absolute;
   top: 170px;
   left: 10;
+
 }
+
 
 div.watching
 {
@@ -83,9 +86,11 @@ div.watching
 div.categories{
     width:120%;
 }
-span{
+
+span
+{
     display:inline-block;    
-    width:20%;
+    width:27%;
     text-align:center;
 }
 
@@ -95,22 +100,77 @@ hr
    margin:0 auto;
 }
 
-.button {
-  background-color: #ac9f9f; /* black */
+
+
+
+.allmovies{
+  background-color: #e48787; /* black */
   border: none;
   color: black;
-  padding: 12px 50px;
+  padding: 9px 30px;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  /*margin: 40px 2px; */
+  font-size: 200%;
+  /*margin: 40px 2px; 
+  position: absolute;
+  top: 150px;
+  left:350px;*/
   cursor: pointer;
   border-radius: 12px;
   position: absolute;
-  top: 150px;
-  left:350px;
+  top:100px;
+  left: 30px;
+  text-align: center;
+  outline:none;
+  box-shadow: 0 5px rgb(216, 174, 174);
 
 }
+
+.allmovies:hover{background-color: #e79f9f; }
+
+.allmovies:active
+{
+  background-color: #e49999;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+.libraryofmovies {
+  background-color: #1782b4; /* black */
+  border: none;
+  color: black;
+  padding: 9px 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /*margin: 40px 2px;*/
+  cursor: pointer;
+  border-radius: 12px;
+  position: absolute;
+  top: 50px;
+  left:350px;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 9px rgb(192, 191, 191);
+
+}
+
+.libraryofmovies:hover{background-color: #2092c7; }
+
+.libraryofmovies:active
+{
+  background-color: #1782b4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+
+
+
 
 </style>
 
@@ -126,22 +186,20 @@ hr
 
 
 
-
-<!--p0 The only purpose of making this website is to provide a convenient
-     way to download clean movies.
- <br /> I do not encourage watching movies without paying. -->
-
-
-
 <body>
 
+  <a href= "allmovies.html" title="All Movies" > <button class="allmovies"> <strong> All Movies </strong>  </button> </a>
+
+<a href="https://myousafzafar.github.io/libraryofmovies/" title="Home Page">    <button class="libraryofmovies"> <p9> <strong> Library of Movies </strong> </p9> </button> </a>
+
+
 <ul>
-<h1>Library of Movies </h1> 
-<br /> <br /> <br /> 
- <div class="purpose">  <p0> <strong> Update 4.0 </strong>
-<br /> <li>  New page loaded in the same tab except for download </li> 
-<li> You can go back to homepage by clicking at 'Library Of Movies' at top left </li>
+<br /> <br /> <br />
+ <div class="update">  <p0> <strong> Update 4.0 </strong>
+<br /> <li> 'Home Page' tab added</li>
 <li> 'All Movies' tab added </li>
+<li>  New page loaded in the same tab except for download </li> 
+
 </p0>
 
  
@@ -150,7 +208,7 @@ hr
 
 </ul>
 
- <a href="allmovies.html" title="All Movies">    <button class="button"> Access All Movies. Click Here. </button> </a>
+
 
  <br /> <br />  <br /> <br /> <br /> <br />   <br /> <br />  <br />
  <br /><br /><br /> <br /><br />
@@ -163,49 +221,53 @@ hr
  <br />  <br /> <br /> <br />  
  </div>
 
-<ul>
-
 
 
    <div class="categories">
 
 <strong><p3> <a href="actionthriller.html"  title="List" > <span> Action/Thriller </span> </a>  </p3> </strong>
  
- <strong><p4> <a href="Romance.html" title="List" > <span> Romance </span>  </a> </p4> </strong>
+ <strong><p3> <a href="Romance.html" title="List" > <span> Romance </span>  </a> </p3> </strong>
 
-<strong><p5> <a href="Adventure.html"   title="List" >  <span> Adventure </span>  </a> </p5> </strong>
+<strong><p3> <a href="Adventure.html"   title="List" >  <span> Adventure </span>  </a> </p3> </strong>
 
-<strong> <p6> <a href="Drama.html"   title="List" ><span> Drama </span>  </a> </p6> </strong>
+
 
    <br /> <br /><br /><br />
 
+   <strong> <p4> <a href="Drama.html"   title="List" ><span> Drama </span>  </a> </p4> </strong>
 
-   <strong><p3> <a href="scifi.html"   title="List" > <span> Sci-Fi </span> </a>  </p3> </strong>
+   <strong><p4> <a href="scifi.html"   title="List" > <span> Sci-Fi </span> </a>  </p4> </strong>
    
    <strong><p4> <a href="horror.html"    title="List" >  <span>  Horror  </span>  </a> </p4> </strong>
   
-  <strong><p5> <a href="crime.html"   title="List" > <span>  Crime  </span> </a> </p5> </strong>
+
   
-  <strong><p4> <a href="history.html"   title="List" >   <span>  History </span>   </a> </p4> </strong>
 
      <br /> <br /><br /><br />
 
+     <strong><p5> <a href="crime.html"   title="List" > <span>  Crime  </span> </a> </p5> </strong>
 
-     <strong><p3> <a href="animation.html"    title="List" > <span> Animation </span> </a> </p3> </strong>
+     <strong><p5> <a href="history.html"   title="List" >   <span>  History </span>   </a> </p5> </strong>
+
+     <strong><p5> <a href="animation.html"    title="List" > <span> Animation </span> </a> </p5> </strong>
+
+
+    <br /> <br /><br /><br />
+
      
-   <strong> <p6> <a href="comedy.html"   title="List" >  <span> Comedy </span>  </a> </p6> </strong> 
+    <strong> <p6> <a href="comedy.html"   title="List" >  <span> Comedy </span>  </a> </p6> </strong> 
     
-    <strong><p5> <a href="mystery.html"   title="List" > <span> Mystery </span>  </a> </p5> </strong>
+    <strong><p6> <a href="mystery.html"   title="List" > <span> Mystery </span>  </a> </p6> </strong>
     
     <strong> <p6> <a href="fantasy.html" title="List" > <span> Fantasy </span>  </a> </p6> </strong>
+
 
     <br /><br /><br /><br /> <br /><br /><br /><br />
   
 
-     </div>
-     
 
-   </ul>
+     </div>
 
 </body>
 
