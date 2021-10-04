@@ -16,14 +16,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet"> 
  
 
-
 <style type="text/css">
 
- 
+
+.rightcol
+{
+  position: absolute;
+  right: 25px;
+  top: 10%;
+  display: flex;
+  align-items: center;
+}
+
+
+
+#icon
+{
+  width: 80px;
+  cursor: pointer;
+}
+
+
 body
 {
   max-height: 625px;
-  max-width: 400px;
+  max-width: 450px;
    margin: 0 auto;
 background-color:rgb(234,234,234,255);
 background-image:url(wallpaper.jpg);
@@ -60,6 +77,7 @@ h2{color: rgb(235, 90, 119); font-family:'Crete Round', serif;}
 p3{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 55%;left: 45%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 70px; }
 p4{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 65%;left: 45%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 110px; }
 p5{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 75%;left: 45%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 85px; }
+p6{font-size: 18px; color: rgb(255, 255, 255); } 
 
 p9 {color: rgb(0, 0, 0); font-family: 'Crete Round', serif; font-size: 300%; text-align:center;}
 
@@ -173,6 +191,11 @@ top: 34%;
 left: 0%;
 }
 
+
+
+
+
+
 </style>
 
 </head>
@@ -197,6 +220,7 @@ left: 0%;
 <ul>
  <div class="update">  <p0> <strong> Update 5.0 </strong>
 <li> Optimised layout for Mobiles </li>
+<li> Started adding Audio files for communication </li>
 </p0></div>
 </ul>
 
@@ -250,6 +274,40 @@ left: 0%;
      <strong> <a href="fantasy.html" title="List" > Fantasy   </a>  </strong>
    
 </p5>
+
+
+<div class="rightcol">
+<img src="play.png" id="icon">
+<p6> <strong> Set Your Heart Ablaze! </strong> </p6>
+</div>
+
+<audio id="mysong">
+  <source src="naruto theme.mpga" type="audio/mp3">
+</audio>
+
+<script>
+
+
+  var mysong = document.getElementById("mysong");
+var icon = document.getElementById("icon");
+
+icon.onclick = function()
+{
+if(mysong.paused)
+{
+mysong.play();
+icon.src = "pause.png";
+}
+
+else{
+mysong.pause();
+icon.src = "play.png";
+}
+
+}
+
+
+  </script>
 
 
 
