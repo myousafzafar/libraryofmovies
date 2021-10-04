@@ -10,12 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&display=swap" rel="stylesheet"> 
-    <!-- font-family: 'Crete Round', serif; -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet"> 
-    <!--font-family: 'Stylish', sans-serif; -->
+ 
 
 
 <style type="text/css">
@@ -23,30 +22,46 @@
  
 body
 {
-   margin: 50px 0 0 0;
+  max-height: 625px;
+  max-width: 400px;
+   margin: 0 auto;
 background-color:rgb(234,234,234,255);
 background-image:url(wallpaper.jpg);
-height: auto;
-width:auto;
+
 
 }
 
- /*  ul{font-weight: bold;} 
-          66 66 228        */
 
-
-h2{color: rgb(235, 90, 119); font-family:'Crete Round', serif;text-align: center; }
 p0{font-family: Arial, Helvetica, sans-serif; font-size: 200%; line-height: 150%; font-family: 'Stylish',
  sans-serif;color: rgb(190, 171, 171);}
 
-p1{font-family:Arial, Helvetica, sans-serif; font-size: 200%;}
-p2{font-family: Arial, Helvetica, sans-serif; font-size:225%;font-family: 'Stylish', sans-serif;
-color: rgb(190, 171, 171);}
+p1{font-family:Arial, Helvetica, sans-serif; font-size: 200%; text-align: center;   position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
 
-p3{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
-p4{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
-p5{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
-p6{font-family:Arial, Helvetica, sans-serif; font-size: 150%;}
+
+
+p2{
+   font-family: Arial, Helvetica, sans-serif; font-size:250%;font-family: 'Stylish', sans-serif; color: rgb(212, 194, 194);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
+
+h2{color: rgb(235, 90, 119); font-family:'Crete Round', serif;}
+
+
+p3{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 55%;left: 50%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 30px; }
+p4{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 65%;left: 50%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 30px; }
+p5{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 75%;left: 50%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 30px; }
+
+
 p9 {color: rgb(0, 0, 0); font-family: 'Crete Round', serif; font-size: 300%; text-align:center;}
 
 
@@ -70,56 +85,25 @@ a:visited
 div.update 
 {
   position: absolute;
-  top: 170px;
-  left: 10;
+  top: 12%;
+  left: 10px;
 
 }
-
-
-div.watching
-{
-   text-align: center;
- 
-}
-
-
-div.categories{
-    width:120%;
-}
-
-span
-{ 
-    display:inline-block;    
-    width:27%;
-    text-align:center;
-}
-
-hr
-{
-   width: 120%;
-   margin:0 auto;
-}
-
-
 
 
 .allmovies{
-  background-color: #e48787; /* black */
+  background-color: #e48787;
   border: none;
   color: black;
   padding: 9px 30px;
   text-decoration: none;
   display: inline-block;
   font-size: 200%;
-  /*margin: 40px 2px; 
-  position: absolute;
-  top: 150px;
-  left:350px;*/
   cursor: pointer;
   border-radius: 12px;
   position: absolute;
-  top:100px;
-  left: 30px;
+  top:5%;
+  left: 25px;
   text-align: center;
   outline:none;
   box-shadow: 0 5px rgb(216, 174, 174);
@@ -138,22 +122,21 @@ hr
 
 
 .libraryofmovies {
-  background-color: #1782b4; /* black */
+  background-color: #1782b4;
   border: none;
   color: black;
   padding: 9px 30px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  /*margin: 40px 2px;*/
   cursor: pointer;
   border-radius: 12px;
   position: absolute;
-  top: 50px;
-  left:350px;
+  top: 2%;
   text-align: center;
   outline: none;
   box-shadow: 0 5px rgb(192, 191, 191);
+
 
 }
 
@@ -167,10 +150,29 @@ hr
 }
 
 
+div.line1{
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:#534f4f;
+  height: 2px;
+  position: absolute;
+top: 31%;
+left: 0%;
+}
 
-
-
-
+div.line2{
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color:#534f4f;
+  height: 2px;
+  position: absolute;
+top: 39%;
+left: 0%;
+}
 
 </style>
 
@@ -194,80 +196,62 @@ hr
 
 
 <ul>
-<br /> <br /> <br />
  <div class="update">  <p0> <strong> Update 4.0 </strong>
 <br /> <li> 'Home Page' tab added</li>
 <li> 'All Movies' tab added </li>
 <li>  New page loaded in the same tab except for download </li> 
 <li> Wazir Movie Added || Ak vs Ak Movie Added  </li>
-</p0>
-
- 
-</div>
-
-
+<li> Optimised layout for Mobiles </li>
+</p0></div>
 </ul>
 
+<div class="line1"> <hr />  </div> 
+
+<p1> <h2>  Genres </h2> </p1>
+
+<div class="line2">  <hr /> </div>
 
 
- <br /> <br />  <br /> <br /> <br /> <br />   <br /> <br />  <br />
- <br /><br /><br /><br /><br /><br /><br /> <br /><br />
- <p8>  <br /><br /> <hr /> </p8>
-
-<p1> <h2>Genres </h2> </p1>
-<hr /> <br /> <br /> <br />
- 
-<div class="watching"> <p2> What are you in mood of watching today? &#128515; </p2>
- <br />  <br /> <br /> <br />  
- </div>
+<p2> What are you in mood of watching today? &#128515; </p2>
 
 
 
-   <div class="categories">
+<p3>
+<strong> <a href="actionthriller.html"  title="List" >  Action/Thriller </a>   </strong>
+&ensp;
+ <strong> <a href="Romance.html" title="List" > Romance  </a>  </strong>
+ &ensp;
+<strong> <a href="Adventure.html"   title="List" > Adventure   </a>  </strong>
+&ensp;
+<strong>  <a href="Drama.html"   title="List" > Drama </a>  </strong>
 
-<strong><p3> <a href="actionthriller.html"  title="List" > <span> Action/Thriller </span> </a>  </p3> </strong>
- 
- <strong><p3> <a href="Romance.html" title="List" > <span> Romance </span>  </a> </p3> </strong>
-
-<strong><p3> <a href="Adventure.html"   title="List" >  <span> Adventure </span>  </a> </p3> </strong>
+</p3>
 
 
+<p4>
+   <strong> <a href="scifi.html"   title="List" > Sci-Fi </a>   </strong>
+   &emsp;
+   <strong> <a href="horror.html"    title="List" >   Horror    </a>  </strong>
+   &emsp;
+   <strong> <a href="crime.html"   title="List" > Crime  </a>  </strong>
+   &emsp;
+   <strong> <a href="history.html"   title="List" > History    </a>  </strong>
 
-   <br /> <br /><br /><br />
+</p4>
 
-   <strong> <p4> <a href="Drama.html"   title="List" ><span> Drama </span>  </a> </p4> </strong>
 
-   <strong><p4> <a href="scifi.html"   title="List" > <span> Sci-Fi </span> </a>  </p4> </strong>
+<p5>
    
-   <strong><p4> <a href="horror.html"    title="List" >  <span>  Horror  </span>  </a> </p4> </strong>
-  
-
-  
-
-     <br /> <br /><br /><br />
-
-     <strong><p5> <a href="crime.html"   title="List" > <span>  Crime  </span> </a> </p5> </strong>
-
-     <strong><p5> <a href="history.html"   title="List" >   <span>  History </span>   </a> </p5> </strong>
-
-     <strong><p5> <a href="animation.html"    title="List" > <span> Animation </span> </a> </p5> </strong>
+     <strong> <a href="animation.html"    title="List" >  Animation  </a> </strong>
+     &ensp;
+     <strong>  <a href="comedy.html"   title="List" >   Comedy   </a>  </strong> 
+     &ensp;
+     <strong> <a href="mystery.html"   title="List" > Mystery   </a> </strong>
+     &ensp;
+     <strong> <a href="fantasy.html" title="List" > Fantasy   </a>  </strong>
+</p5>
 
 
-    <br /> <br /><br /><br />
-
-     
-    <strong> <p6> <a href="comedy.html"   title="List" >  <span> Comedy </span>  </a> </p6> </strong> 
-    
-    <strong><p6> <a href="mystery.html"   title="List" > <span> Mystery </span>  </a> </p6> </strong>
-    
-    <strong> <p6> <a href="fantasy.html" title="List" > <span> Fantasy </span>  </a> </p6> </strong>
-
-
-    <br /><br /><br /><br /> <br /><br /><br /><br />
-  
-
-
-     </div>
 
 </body>
 
