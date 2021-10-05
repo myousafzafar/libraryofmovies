@@ -19,7 +19,24 @@
 <style type="text/css">
 
 
-.rightcol
+
+.ablaze
+{
+  position: absolute;
+  right: 25px;
+  top: 18%;
+  display: flex;
+  align-items: center;
+}
+
+#songicon
+{
+  width: 80px;
+  cursor: pointer;
+}
+
+
+.msg
 {
   position: absolute;
   right: 25px;
@@ -30,11 +47,14 @@
 
 
 
-#icon
+#msgicon
 {
   width: 80px;
   cursor: pointer;
 }
+
+
+
 
 
 body
@@ -78,7 +98,7 @@ p3{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolut
 p4{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 65%;left: 45%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 110px; }
 p5{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 75%;left: 45%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 85px; }
 p6{font-size: 18px; color: rgb(255, 255, 255); } 
-
+p7{font-size: 18px; color: rgb(255, 255, 255); } 
 p9 {color: rgb(0, 0, 0); font-family: 'Crete Round', serif; font-size: 300%; text-align:center;}
 
 
@@ -167,30 +187,66 @@ div.update
 }
 
 
-div.line1{
-  border: 0;
-  clear:both;
-  display:block;
-  width: 100%;               
-  background-color:#534f4f;
-  height: 2px;
-  position: absolute;
-top: 26%;
+
+
+
+hr.lineleft {
+padding: 0;
+border: none;
+height: 2px;
+width: 44%;
+background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(255, 255, 255, 0.75), rgba(0,0,0,0));
+background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(255, 255, 255, 0.75), rgba(0,0,0,0));
+background-image: -ms-linear-gradient(left, rgba(0,0,0,0),rgba(255, 255, 255, 0.75), rgba(0,0,0,0));
+background-image: -o-linear-gradient(left, rgba(0,0,0,0),rgba(255, 255, 255, 0.75), rgba(0,0,0,0));
+color: #333;
+text-align: center;
+position: absolute;
+top: 30%;
 left: 0%;
 }
 
-div.line2{
-  border: 0;
-  clear:both;
-  display:block;
-  width: 100%;
-  background-color:#534f4f;
-  height: 2px;
-  position: absolute;
-top: 34%;
-left: 0%;
+hr.lineleft:after {
+content:" ";
+display: inline-block;
+position: relative;
+top: -2.1em;
+font-size: 1.5em;
+padding: 19px 1.75em;
+background:none;
+background-size: 90px 90px;
+height: 50px;
 }
 
+
+
+hr.lineright {
+padding: 0;
+border: none;
+height: 2px;
+width: 44%;
+background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(255, 255, 255, 0.75), rgba(0,0,0,0));
+background-image: -moz-linear-gradient(left, rgba(0,0,0,0),rgba(255, 255, 255, 0.75), rgba(0,0,0,0));
+background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(255, 255, 255, 0.75), rgba(0,0,0,0));
+background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(255, 255, 255, 0.75), rgba(0,0,0,0));
+color: #333;
+text-align: center;
+position: absolute;
+top: 30%;
+right: 0%;
+}
+
+hr.lineright:after {
+content:" ";
+display: inline-block;
+position: relative;
+top: -2.1em;
+font-size: 1.5em;
+padding: 19px 1.75em;
+background:none;
+background-size: 90px 90px;
+height: 50px;
+}
 
 
 
@@ -224,11 +280,9 @@ left: 0%;
 </p0></div>
 </ul>
 
-<div class="line1"> <hr />  </div> 
 
 <p1> <h2>  Genres </h2> </p1>
 
-<div class="line2">  <hr /> </div>
 
 
 <p2> What are you in mood of watching today? &#128515; </p2>
@@ -276,38 +330,80 @@ left: 0%;
 </p5>
 
 
-<div class="rightcol">
-<img src="play.png" id="icon">
-<p6> <strong> Set Your Heart Ablaze! </strong> </p6>
-</div>
 
-<audio id="mysong">
-  <source src="naruto theme.mpga" type="audio/mp3">
-</audio>
+<div class="msg">
+  <img src="play.png" id="msgicon">
+  <p6> <strong> Msg From Creator </strong> </p6>
+  </div>
+  
+  <audio id="msg">
+    <source src="msg from creator.m4a" type="audio/mp3">
+  </audio>
+  
+  <script>
+    var mymsg = document.getElementById("msg");
+  var msgicon = document.getElementById("msgicon");
+  
+  msgicon.onclick = function()
+  {
+  if(mymsg.paused)
+  {
+  mymsg.play();
+  msgicon.src = "pause.png";
+  }
+  
+  else{
+  mymsg.pause();
+  msgicon.src = "play.png";
+  }
+  
+  }
+    </script>
 
-<script>
 
 
-  var mysong = document.getElementById("mysong");
-var icon = document.getElementById("icon");
 
-icon.onclick = function()
-{
-if(mysong.paused)
-{
-mysong.play();
-icon.src = "pause.png";
-}
+<div class="ablaze">
+  <img src="play.png" id="songicon">
+  <p7> <strong> Set Your Heart Ablaze! </strong> </p7>
+  </div>
+  
+  <audio id="ablaze">
+    <source src="naruto theme.mpga" type="audio/mp3">
+  </audio>
+  
+  <script>
+    var mysong = document.getElementById("ablaze");
+  var songicon = document.getElementById("songicon");
+  
+  songicon.onclick = function()
+  {
+  if(mysong.paused)
+  {
+  mysong.play();
+  songicon.src = "pause.png";
+  }
+  
+  else{
+  mysong.pause();
+  songicon.src = "play.png";
+  }
+  
+  }
+    </script>
+  
+  
 
-else{
-mysong.pause();
-icon.src = "play.png";
-}
-
-}
 
 
-  </script>
+
+<hr class="lineleft">
+
+<hr class="lineright">
+
+
+
+
 
 
 
