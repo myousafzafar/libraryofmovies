@@ -21,11 +21,11 @@
 
 
 
-.ablaze
+.song
 {
   position: absolute;
   right: 25px;
-  top: 18%;
+  top: 10%;
   display: flex;
   align-items: center;
 }
@@ -36,12 +36,12 @@
   cursor: pointer;
 }
 
-
+/*
 .msg
 {
   position: absolute;
   right: 25px;
-  top: 10%;
+  top: 18%;
   display: flex;
   align-items: center;
 }
@@ -54,7 +54,7 @@
   cursor: pointer;
 }
 
-
+*/
 
 
 
@@ -98,7 +98,7 @@ p4{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolut
 p5{font-family:Arial, Helvetica, sans-serif; font-size: 200%;  position: absolute; top: 75%;left: 49%; margin-right: -50%; transform: translate(-50%, -50%); word-spacing: 85px; }
 p6{font-size: 18px; color: rgb(255, 255, 255); } 
 p7{font-size: 18px; color: rgb(255, 255, 255); }
-p8{font-size: 18px; color: rgb(255, 255, 255); position: absolute; top: 27%; right: 25px; text-align: center;}
+p8{font-size: 18px; color: rgb(255, 255, 255); position: absolute; top: 24%; right: 25px; text-align: center;} /*top 27% before*/
 p9 {color: rgb(0, 0, 0); font-family: 'Crete Round', serif; font-size: 300%; text-align:center;}
 
 
@@ -273,9 +273,10 @@ height: 50px;
 
 
 <ul>
- <div class="update">  <p0> <strong> Update 5.0 </strong>
-<li> Optimised layout for Mobiles </li>
-<li> Started using Audio files for communication </li>
+ <div class="update">  <p0> <!--  <strong> Update 5.0 </strong> -->
+<li> Enjoy clean movies at your convenience! </li>
+<li> For now, I will upload requested movies only. Reach out.</li>
+<li> (Busy with other stuff :P)</li>
 </p0></div>
 </ul>
 
@@ -333,7 +334,7 @@ height: 50px;
 </p5>
 
 
-
+<!--
 <div class="msg">
   <img src="play.png" id="msgicon">
   <p6> <strong> Msg From Creator </strong> </p6>
@@ -362,21 +363,21 @@ height: 50px;
   
   }
     </script>
+-->
 
 
 
-
-<div class="ablaze">
+<div class="song">
   <img src="play.png" id="songicon">
-  <p7> <strong> Set Your Heart Ablaze! </strong> </p7>
+  <p7> <strong> Piano - Your Lie in April </strong> </p7>
   </div>
   
-  <audio id="ablaze">
-    <source src="naruto theme.mpga" type="audio/mp3">
+  <audio id="song">
+    <source src="piano your lie in april.mp3" type="audio/mp3">
   </audio>
   
   <script>
-    var mysong = document.getElementById("ablaze");
+    var mysong = document.getElementById("song");
   var songicon = document.getElementById("songicon");
   
   songicon.onclick = function()
